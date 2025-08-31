@@ -1,26 +1,37 @@
-.suprematism {
-  background-image: url("./img/suprematism/square.png");
-  background-size: cover;
-  background-color: #222;
-  background-attachment: fixed;
-  color: #dedede;
-  font-family: NewsCycle, sans-serif;
-}
 .suprematism header {
   z-index: 10;
   position: fixed;
   width: 200px;
-  background-color: rgba(212,175,55,0.502);
   top: 0;
   bottom: 0;
   left: 0;
   font-family: "Next Art", fantasy;
   font-weight: 600;
+  background-color: transparent;
+}
+.suprematism header .custom_btn-nav {
+  width: 2rem;
+  height: 2rem;
+  background-color: #191970;
+  border-radius: 1px;
+  right: 0;
+  top: 0;
+  position: fixed;
+  padding: 0;
+}
+.suprematism header .custom_btn-nav svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+.suprematism header #navbar {
+  background-color: rgba(212,175,55,0.631);
 }
 .suprematism header .navbar-nav {
   display: grid !important;
   grid-template-columns: 20px 60px 60px 20px 40px;
   position: fixed;
+  padding: 0;
   top: 0;
   left: 0;
   bottom: 0;
@@ -74,6 +85,7 @@
   background-color: #d4af37;
   transform: rotate(-90deg) translate(16vh, -20px);
   justify-content: flex-start;
+  padding-left: 0.2rem;
   width: 30vh;
   z-index: 2;
   height: 40px;
@@ -120,25 +132,322 @@
 .suprematism header .nav-item .dropdown-menu .nav-link {
   color: #fff;
   width: 100%;
-  border-radius: 0.2rem;
   text-align: left;
   padding: 0.2rem 1rem;
 }
 .suprematism header .nav-item .dropdown-menu .nav-link:hover {
-  background-color: #f00;
+  background-color: #191970;
+  color: #dedede !important;
+}
+@media screen and (min-width: 576px) {
+  .suprematism header {
+    background-color: rgba(212,175,55,0.502);
+  }
+  .suprematism header #navbar {
+    background-color: transparent;
+  }
+}
+.suprematism footer {
+  background-color: #191970;
+  padding: 1rem;
+  margin: 2rem 0;
+  position: relative;
+  display: grid;
+}
+.suprematism footer>* {
+  position: relative;
+  z-index: 1;
+}
+.suprematism footer::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: calc(100% - 4rem);
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(180deg, #d4af37 20%, #f00);
+  border-radius: 50%;
+  animation: 15s move-circle linear infinite;
+}
+.suprematism footer .footer_caption {
+  font-family: "Rodchenko Constructed", serif;
+  color: #f00;
+}
+.suprematism footer .footer_caption h5 {
+  display: flex;
+  gap: 1rem;
+  font-size: 9vw;
+  line-height: 1;
+}
+.suprematism footer .footer_links p {
+  column-count: 2;
+  column-gap: 2rem;
+  hyphens: auto;
+  line-height: 1.2;
+  text-align: left;
+}
+.suprematism footer .footer_links a {
+  font-family: "Rodchenko Constructed", fantasy;
+  line-height: 1;
+  padding: 5px;
+  hyphens: auto;
+  border: 1px solid;
+  display: inline-block;
+  text-align: right;
+  margin: 4px 0 2px;
+}
+.suprematism footer .footer_links a:hover {
+  background-color: rgba(212,175,55,0.502);
+}
+.suprematism footer .footer_copy {
+  font-family: "Rodchenko Grotesk", serif;
+  word-spacing: 0.3rem;
+  text-align: right;
+  color: #d4af37;
+  font-size: 5vw;
+  letter-spacing: 0.1rem;
+}
+@media screen and (min-width: 576px) {
+  .suprematism footer {
+    grid-template-columns: 1fr 1fr;
+  }
+  .suprematism footer .footer_caption h5 {
+    font-size: 5.8vw;
+    flex-direction: column;
+    gap: 0;
+  }
+  .suprematism footer .footer_links p {
+    column-count: 1;
+  }
+  .suprematism footer .footer_copy {
+    font-size: 1.5rem;
+    grid-column-end: span 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .suprematism footer {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+  }
+  .suprematism footer .footer_caption h5 {
+    font-size: 3rem;
+    flex-direction: column;
+    gap: 0;
+  }
+  .suprematism footer .footer_links p {
+    column-count: 2;
+    padding: 0 1rem;
+  }
+  .suprematism footer .footer_copy {
+    font-size: 1.2rem;
+    grid-column-end: span 1;
+    align-self: flex-end;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .suprematism footer {
+    grid-template-columns: auto 1fr auto;
+    gap: 2rem;
+  }
+  .suprematism footer .footer_caption h5 {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .suprematism footer .footer_links p {
+    max-width: 600px;
+    column-count: 2;
+    justify-self: center;
+  }
+  .suprematism footer .footer_copy {
+    align-self: flex-start;
+  }
+}
+.suprematism .section_0_5 {
+  margin: 0;
+  padding: 1rem 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.suprematism .section_0_5 .map-container {
+  height: 100%;
+  position: relative;
+}
+@media screen and (min-width: 576px) {
+  .suprematism .section_0_5 .map-container {
+    height: 60vh;
+  }
+}
+.suprematism .section_0_5 .map {
+  width: 100%;
+  height: 100%;
+}
+.suprematism aside {
+  padding-top: 1rem;
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .suprematism aside {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.suprematism aside .map-container {
+  height: 400px;
+}
+.suprematism #map {
+  height: 100%;
+}
+.suprematism .meta-names {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.suprematism .meta-names li {
+  cursor: pointer;
+  border: 1px solid;
+  text-align: center;
+  padding: 4px 0;
+  font-family: "Rodchenko Grotesk", seif;
+  color: #d4af37;
+}
+.suprematism .meta-names li.active {
+  background-color: #000;
+}
+.suprematism .meta-content {
+  padding: 1rem 0;
+}
+.suprematism .meta-content > div {
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.suprematism .meta-content > div.active {
+  display: flex;
+}
+.suprematism .meta-line {
+  grid-template-columns: 1fr auto;
+  display: grid;
+  gap: 0.2rem;
+  flex-grow: 1;
+}
+.suprematism .meta-text {
+  min-width: max-content;
+  display: flex;
+  border: 1px solid;
+  justify-content: center;
+  align-items: stretch;
+  font-family: "Rodchenko Constructed", serif;
+  font-size: 1.2em;
+}
+.suprematism .meta-text .link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 1rem;
+}
+.suprematism .meta-text .link:hover {
+  background-color: #191970;
+}
+.suprematism .sup-content {
+  display: flex;
+  align-items: stretch;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
+.suprematism .sup-content .sup {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  line-height: 1;
+  flex: 1;
+  border: 1px solid;
+  background-color: rgba(212,175,55,0.502);
+}
+.suprematism .sup-content .sup:hover {
+  background-color: #d4af37;
+}
+.suprematism .marker {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #00f;
+}
+.suprematism [data-type] {
+  font-family: "Rodchenko Constructed", seif;
+  line-height: 1;
+}
+.suprematism [data-type].show {
+  border: 1px solid;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  background-color: rgba(212,175,55,0.631);
+  padding: 5px;
+  margin: 0;
+  transition-property: font-size, color, border, background;
+  transition-duration: 1s;
+}
+.suprematism [data-type].show.active {
+  background-color: #191970;
+}
+.suprematism {
+  background-color: #000;
+  background-image: url("./img/suprematism/square.png");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #dedede;
+  font-family: NewsCycle, sans-serif;
+  font-weight: bold;
+}
+.suprematism main.show::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  overflow: hidden;
 }
 .suprematism h2 {
   font-family: "Next Art", fantasy;
-  font-size: 3rem;
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.4rem;
+  width: max-content;
+  transform-style: preserve-3d;
+  color: #fff;
+  font-weight: bold;
+}
+.suprematism h2::after {
+  content: attr(title);
+  position: absolute;
+  z-index: -1;
+  transform: perspective(1500px) translateZ(-2rem) translateX(0.5rem) translateY(0.2rem) skewX(-40deg) scaleY(70%);
+  color: #d4af37;
+  perspective-origin: bottom left;
 }
 .suprematism p {
   font-size: 20px;
+  letter-spacing: 0.1rem;
   font-family: NewsCycle, sans-serif;
   text-align: justify;
+  hyphens: auto;
+  text-wrap: balance;
 }
 .suprematism .wrapper {
   padding: 0 24px;
-  background-color: rgba(212,175,55,0.125);
+  background-color: rgba(212,175,55,0.059);
+}
+@media screen and (min-width: 576px) {
+  .suprematism .wrapper {
+    padding: 0 20px 0 220px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .suprematism .wrapper {
@@ -147,10 +456,14 @@
 }
 .suprematism .home {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   align-content: flex-start;
   align-items: flex-start;
   gap: 0 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .suprematism .home {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .suprematism .offcanvas {
   width: 200px;
@@ -159,22 +472,26 @@
 .suprematism .offcanvas-header {
   position: absolute;
   right: 0;
-  z-index: 1;
+  z-index: 10;
+  padding: 10px;
 }
 .suprematism .offcanvas-header .offcanvas-title {
   display: none;
 }
+.suprematism .offcanvas-header .btn-close {
+  filter: invert(100%);
+}
 .suprematism .offcanvas-body {
   padding: 0;
+  overflow: visible;
 }
 .suprematism .home_title {
-  grid-column-end: span 3;
   display: block;
   padding: 20vh 0;
 }
 .suprematism .home_title h1 {
   font-family: "Rodchenko Constructed", serif;
-  font-size: 7rem;
+  font-size: 8vw;
   color: #f00;
 }
 .suprematism .home_title h2 {
@@ -182,43 +499,75 @@
   color: #d4af37;
   text-align: right;
 }
-.suprematism .home_design {
-  padding-left: 1rem;
-  grid-column: 2/4;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 2rem;
-  position: relative;
+.suprematism img,
+.suprematism video {
+  max-width: 100%;
 }
-.suprematism .home_design::before {
-  content: "";
-  background-color: rgba(212,175,55,0.631);
-  width: 10px;
-  height: 100%;
-  position: absolute;
-}
-.suprematism .home_design h3 {
-  background-color: rgba(255,0,0,0.333);
-  font-family: "Rodchenko Grotesk";
-}
-.suprematism .home_design img {
-  float: left;
-  width: 30%;
-  margin-right: 1rem;
-}
-.suprematism .home_design+section {
-  grid-column-start: 1;
-  grid-row-start: 3;
-}
-.suprematism .home_design_top {
-  grid-column-end: span 2;
-}
-.suprematism .home_issue {
-  display: grid;
-  gap: 1rem;
-}
-.suprematism .home_issue img {
-  width: 100%;
+@media screen and (min-width: 1200px) {
+  .suprematism #about {
+    display: grid;
+    grid-column-end: span 3;
+    grid-template-columns: repeat(2, 1fr) 300px;
+    gap: 1rem 2rem;
+    background-image: url("./img/suprematism/pic1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .suprematism #about :nth-child(2) {
+    grid-column-start: 1;
+    grid-row-start: 2s;
+  }
+  .suprematism #about :nth-child(3) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+  }
+  .suprematism #about :nth-child(4) {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+  .suprematism .home_title {
+    grid-column-end: span 3;
+  }
+  .suprematism .home_design {
+    padding-left: 1rem;
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    position: relative;
+  }
+  .suprematism .home_design::before {
+    content: "";
+    background-color: rgba(212,175,55,0.631);
+    width: 10px;
+    height: 100%;
+    position: absolute;
+  }
+  .suprematism .home_design h3 {
+    background-color: rgba(255,0,0,0.333);
+    font-family: "Rodchenko Grotesk";
+  }
+  .suprematism .home_design img {
+    float: left;
+    width: 30%;
+    margin-right: 1rem;
+  }
+  .suprematism .home_design+section {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  .suprematism .home_design_top {
+    grid-column-end: span 2;
+  }
+  .suprematism .home_issue {
+    display: grid;
+    gap: 1rem;
+  }
+  .suprematism .home_issue img {
+    width: 100%;
+  }
 }
 .suprematism .custom_btn {
   align-self: baseline;
@@ -233,26 +582,281 @@
 .suprematism section {
   margin-bottom: 3rem;
 }
-.suprematism #about {
-  display: grid;
-  grid-column-end: span 3;
-  grid-template-columns: repeat(2, 1fr) 300px;
-  gap: 1rem 2rem;
-  background-image: url("./img/suprematism/pic1.png");
+.suprematism .p1_2 {
+  position: relative;
+  display: block;
+}
+.suprematism .p1_2 img {
+  line-height: 1;
+}
+.suprematism .p1_2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/suprematism/pic_1_2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  z-index: 1;
+  animation: opacity 10s linear infinite;
+}
+.suprematism .p1_3 {
+  position: relative;
+  display: block;
+}
+.suprematism .p1_3 img {
+  line-height: 1;
+}
+.suprematism .p1_3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/suprematism/pic_1_3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+  z-index: 1;
+  animation: translate 10s linear 3s infinite;
+}
+.suprematism .p1_6 {
+  position: relative;
+  display: block;
+}
+.suprematism .p1_6 img {
+  line-height: 1;
+}
+.suprematism .p1_6::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/suprematism/pic_1_6.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  z-index: 1;
+  animation: opacity 10s linear infinite;
+}
+.suprematism .p3_1 {
+  position: relative;
+  display: block;
+  height: max-content;
+}
+.suprematism .p3_1 img {
+  line-height: 1;
+}
+.suprematism .p3_1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/suprematism/pic_3_1.png");
+  background-color: #f00;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: left top;
+  animation: opacity 5s linear infinite;
+  z-index: 1;
 }
-.suprematism #about :nth-child(2) {
+.suprematism .caption {
+  font-family: "Rodchenko Constructed", serif;
+  font-size: 6rem;
+  color: #f00;
+  line-height: 1;
+}
+.suprematism .content section {
+  box-sizing: border-box;
+  column-count: 2;
+  column-gap: 2rem;
+  padding: 0;
+}
+@media screen and (min-width: 1200px) {
+  .suprematism .content section {
+    column-count: 4;
+    column-gap: 2rem;
+  }
+}
+.suprematism .content section h2 {
+  column-span: all;
+  position: relative;
+}
+.suprematism .content section h2::before {
+  content: "";
+  background-color: rgba(212,175,55,0.631);
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  top: 0.8em;
+  z-index: -1;
+}
+.suprematism .content section.section_2_2,
+.suprematism .content section.section_1_2,
+.suprematism .content section.section_3_2 {
+  margin-top: 2rem;
+}
+.suprematism .content section.section_2_1,
+.suprematism .content section.section_1_1,
+.suprematism .content section.section_3_1 {
+  column-count: 1;
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 1rem 2rem;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.suprematism .content section.section_2_1 .caption,
+.suprematism .content section.section_1_1 .caption,
+.suprematism .content section.section_3_1 .caption {
+  grid-column-end: span 2;
+  margin: 2rem 0;
+  text-align: left;
+}
+.suprematism .content section.section_2_1 h1:not(.caption),
+.suprematism .content section.section_1_1 h1:not(.caption),
+.suprematism .content section.section_3_1 h1:not(.caption) {
+  grid-column-start: 2;
+  font-family: "Rodchenko Grotesk";
+  color: #d4af37;
+  text-align: right;
+}
+.suprematism .content section.section_2_1 figure,
+.suprematism .content section.section_1_1 figure,
+.suprematism .content section.section_3_1 figure {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  grid-row-end: span 2;
+  width: 100%;
+}
+.suprematism .content section.section_2_1 p:not(.caption),
+.suprematism .content section.section_1_1 p:not(.caption),
+.suprematism .content section.section_3_1 p:not(.caption) {
+  grid-row-start: 4;
+  column-count: 2;
+  column-gap: 2rem;
+  margin: 0;
+}
+.suprematism .content section.section_1_1 figure {
   grid-column-start: 1;
-  grid-row-start: 2s;
+  grid-row-start: 3;
 }
-.suprematism #about :nth-child(3) {
+.suprematism .content section.section_1_1 p:not(.caption) {
+  grid-row-start: 4;
+  grid-column-start: 2;
+  column-count: 2;
+  column-gap: 2rem;
+  margin: 0;
+}
+.suprematism .content section.section_3_1 {
+  grid-template-rows: auto auto 1fr;
+}
+.suprematism .content section.section_3_1 figure {
+  grid-column-start: 1;
   grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
+  grid-row-end: span 5;
 }
-.suprematism #about :nth-child(4) {
-  grid-row-start: 1;
-  grid-column-start: 2;
+.suprematism .content section.section_3_1 p:not(.caption) {
+  grid-row-start: auto;
+  column-count: 2;
+  column-gap: 2rem;
+  margin: 0;
+}
+.suprematism .content section.section_3_1 p:not(.caption):nth-of-type(1) {
+  column-count: 1;
+}
+.suprematism .content section.section_3_1 p:not(.caption):nth-of-type(2) {
+  column-count: 1;
+}
+.suprematism .content section.section_3_9 {
+  column-count: 1;
+}
+.suprematism .content figure {
+  position: relative;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.suprematism .content figure figcaption {
+  font-size: 50%;
+  align-self: flex-start;
+}
+.suprematism .content figure.style1::before {
+  background-color: rgba(255,0,0,0.314);
+}
+.suprematism .content figure.style1 figcaption {
+  background-color: rgba(0,0,0,0.333);
+  color: #fff;
+  padding: 8px;
+  width: 60%;
+  top: 50%;
+  transform: rotate(-24deg);
+  max-width: max-content;
+  z-index: 2;
+  position: absolute;
+}
+.suprematism .content figure.style2::before {
+  background-color: rgba(212,175,55,0.502);
+}
+.suprematism .content figure.style2 figcaption {
+  background-color: #f2f2f2;
+  color: #f00;
+  padding: 8px;
+  width: 300px;
+  top: 0;
+  right: 0;
+  transform: rotate(90deg) translate(200px, -300px);
+  transform-origin: top left;
+  z-index: 2;
+  position: absolute;
+}
+.suprematism .content figure.style3::before {
+  background-color: rgba(242,242,242,0.502);
+  backdrop-filter: invert(20%) contrast(100%);
+}
+.suprematism .content figure.style3 figcaption {
+  background-color: #f00;
+  color: #000;
+  padding: 8px;
+  width: 400px;
+  max-width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+}
+.suprematism .content figure.style4 figcaption {
+  display: none;
+}
+.suprematism .hidden_char {
+  display: none;
+}
+.suprematism .content main .section_1_1,
+.suprematism .content main .section_2_1,
+.suprematism .content main .section_3_1 {
+  display: none;
 }

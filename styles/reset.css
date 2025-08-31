@@ -48,11 +48,23 @@ figure::before {
     width: 100%;
     height: 100%;
 }
+/*.map {*/
+/*    height: 100%;*/
+/*}*/
 
-.mark {
-    position: fixed;
-    max-width: max-content;
-    padding: 8px;
-    display: grid;
+.meta-names li {
+    cursor: pointer;
+}
+.meta-names .active {
+    background: red;
+}
+.meta-content > * {
+    display: none;
+}
+.meta-content > .active {
+    display: block;
 }
 
+#map {
+    z-index: 8
+}
